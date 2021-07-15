@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Student Roll Call</title>
+</head>
+<body>
+ <h1>Students</h1>
+ <% if(err) { %>
+  <h2><%= err %></h2>
+<% } %>
+<ul>
+ <% students.forEach((student) => { %>
+    <li>
+     <%= student.name %> 
+      -
+     <%= student.present ? "is present" : "is not present" %>
+     
+    </li>
+ <% }) %>
+</ul>
+</body>
+</html>
